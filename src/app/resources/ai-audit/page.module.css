@@ -1,0 +1,173 @@
+.hero {
+  padding: 160px 0 var(--space-8);
+  background: radial-gradient(120% 140% at 12% 0%, #1c2b4a 0%, var(--color-dark-bg) 55%);
+  color: #fff;
+}
+
+.heroTitle {
+  font-size: var(--fs-h1);
+  color: #fff;
+  max-width: 18ch;
+  margin-bottom: var(--space-5);
+}
+
+.heroCopy {
+  font-size: var(--fs-lead);
+  color: var(--color-dark-muted);
+  max-width: 56ch;
+  line-height: 1.6;
+  margin-bottom: var(--space-7);
+}
+
+.includedGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+}
+
+@media (max-width: 860px) {
+  .includedGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.includedItem {
+  display: flex;
+  gap: var(--space-3);
+  padding: var(--space-5) 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.95rem;
+}
+
+.processSection {
+  background: #ffffff;
+}
+
+.processGrid,
+.outcomesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+}
+
+.processCard,
+.outcomeCard {
+  position: relative;
+  min-height: 230px;
+  padding: var(--space-6);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: linear-gradient(145deg, #ffffff 0%, #f5f7fb 100%);
+  box-shadow: var(--shadow-sm);
+}
+
+.processCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: var(--space-6);
+  right: var(--space-6);
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-secondary));
+}
+
+.stepNumber {
+  display: block;
+  margin-bottom: var(--space-7);
+  color: var(--color-accent);
+  font-size: 0.75rem;
+}
+
+.processCard h3,
+.outcomeCard h3 {
+  margin-bottom: var(--space-3);
+  font-size: 1.1rem;
+}
+
+.processCard p,
+.outcomeCard p {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.outcomeCard {
+  min-height: 190px;
+}
+
+.outcomeMark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin-bottom: var(--space-5);
+  border: 1px solid rgba(62, 95, 174, 0.2);
+  border-radius: 50%;
+  color: var(--color-accent);
+  background: var(--color-accent-100);
+}
+
+.faqSection {
+  background: #ffffff;
+}
+
+.faqLayout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: var(--space-9);
+  align-items: start;
+}
+
+.faqLayout h2 {
+  margin-bottom: var(--space-4);
+  font-size: var(--fs-h2);
+}
+
+.faqEyebrow {
+  margin-bottom: var(--space-3);
+  color: var(--color-accent);
+  font: 600 0.75rem var(--font-mono);
+  text-transform: uppercase;
+}
+
+.faqIntro {
+  max-width: 32ch;
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
+.priceBlock {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-7);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-5);
+}
+
+.price {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--color-primary);
+}
+
+.priceNote {
+  font-size: 0.85rem;
+  color: var(--color-subtle);
+}
+
+@media (max-width: 860px) {
+  .processGrid,
+  .outcomesGrid,
+  .faqLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .processCard,
+  .outcomeCard {
+    min-height: 0;
+  }
+}
