@@ -1,4 +1,4 @@
-import type { FrontDeskRow, FrontDeskScenario } from "@/data/Industrysystems";
+import type { FrontDeskRow, FrontDeskScenario } from "@/data/industrySystems";
 import styles from "./FrontDeskTimeline.module.css";
 
 interface Props {
